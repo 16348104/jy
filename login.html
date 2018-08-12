@@ -10,253 +10,260 @@
     <style>
 
         /*去掉苹果默认样式*/
-        input[type="button"], input[type="submit"], input[type="reset"], button{-webkit-appearance: none;}
-        textarea {  -webkit-appearance: none;}
-    /*placerholder*/
+        input[type="button"], input[type="submit"], input[type="reset"], button {
+            -webkit-appearance: none;
+        }
 
-    input::-webkit-input-placeholder {
-        font-size: 30px;
-        color: #999999;
-        font-weight: normal;
-    }
+        textarea {
+            -webkit-appearance: none;
+        }
 
-    input::-moz-placeholder {
-        font-size: 30px;
-        color: #999999;
-        font-weight: normal;
-    }
+        /*placerholder*/
 
-    input:-moz-placeholder {
-        font-size: 30px;
-        color: #999999;
-        font-weight: normal;
-    }
+        input::-webkit-input-placeholder {
+            font-size: 30px;
+            color: #999999;
+            font-weight: normal;
+        }
 
-    input:-ms-input-placeholder {
-        font-size: 30px;
-        color: #999999;
-        font-weight: normal;
-    }
+        input::-moz-placeholder {
+            font-size: 30px;
+            color: #999999;
+            font-weight: normal;
+        }
 
-    .clearfix {
-        zoom: 1;
-    }
+        input:-moz-placeholder {
+            font-size: 30px;
+            color: #999999;
+            font-weight: normal;
+        }
 
-    .clearfix:before,
-    .clearfix:after {
-        display: table;
-        line-height: 0;
-        content: "";
-    }
+        input:-ms-input-placeholder {
+            font-size: 30px;
+            color: #999999;
+            font-weight: normal;
+        }
 
-    .clearfix:after {
-        clear: both;
-    }
+        .clearfix {
+            zoom: 1;
+        }
 
-    .header {
-        line-height: 110px;
-        height: 110px;
-        background-color: #f2f2f2;
-        padding-left: 4.26%;
-        padding-right: 4.26%;
-        font-size: 36px;
-    }
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            line-height: 0;
+            content: "";
+        }
 
-    .weui-flex {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-    }
+        .clearfix:after {
+            clear: both;
+        }
 
-    .weui-flex-item {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-    }
+        .header {
+            line-height: 110px;
+            height: 110px;
+            background-color: #f2f2f2;
+            padding-left: 4.26%;
+            padding-right: 4.26%;
+            font-size: 36px;
+        }
 
-    .tcenter {
-        text-align: center;
-    }
+        .weui-flex {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+        }
 
-    .logo p.p-loo {
-        font-size: 36px;
-        margin-top: 20px
-    }
+        .weui-flex-item {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
 
-    .cont {
-        width: 79.34%;
-        height: 690px;
-        position: absolute;
-        margin-top: 120px;
-        left: 50%;
-        margin-left: -39.67%;
-    }
+        .tcenter {
+            text-align: center;
+        }
 
-    .log-reg {
-        margin-top: 100px;
-    }
+        .logo p.p-loo {
+            font-size: 36px;
+            margin-top: 20px
+        }
 
-    .log-reg>div {
-        width: 100%;
-        margin-top: 1px;
-    }
+        .cont {
+            width: 79.34%;
+            height: 690px;
+            position: absolute;
+            margin-top: 120px;
+            left: 50%;
+            margin-left: -39.67%;
+        }
 
-    .log-reg input {
-        font-size: 30px;
-        outline: none;
-        width: 100%;
-       padding-top: 33px;
-       padding-bottom: 31px;
-        border: none;
-        padding-left: 0;
-        padding-right: 3%
-    }
+        .log-reg {
+            margin-top: 100px;
+        }
 
-    .f34 {
-        font-size: 34px!important;
-    }
+        .log-reg > div {
+            width: 100%;
+            margin-top: 1px;
+        }
 
-    .log-reg input[type='button'] {
-        line-height: 1px;
-        color: #ffffff;
-        border-bottom: none;
-        border-radius: 5px;
-        background: url(img/log-btn-bg.png) no-repeat center;
-        height: 96px;
-        background-size: cover;
-        margin-top: 80px;
-    }
+        .log-reg input {
+            font-size: 30px;
+            outline: none;
+            width: 100%;
+            padding-top: 33px;
+            padding-bottom: 31px;
+            border: none;
+            padding-left: 0;
+            padding-right: 3%
+        }
 
-    .log-reg input[type='text'],
-    .log-reg input[type='password'] {
-        width: 70%;line-height: 1;
-    }
+        .f34 {
+            font-size: 34px !important;
+        }
 
-    .log-reg .icon.iconfont {
-        font-size: 56px;
-        color: #999;
-        position: absolute;
-        right: 0;
-        top: 9px;
-        display: none;
-    }
+        .log-reg input[type='button'] {
+            line-height: 1px;
+            color: #ffffff;
+            border-bottom: none;
+            border-radius: 5px;
+            background: url(img/log-btn-bg.png) no-repeat center;
+            height: 96px;
+            background-size: cover;
+            margin-top: 80px;
+        }
 
-    .log-reg>div {
-        position: relative;
-        /* display: flex; */
-        border-bottom: 1px solid #e7e7e7;
-    }
+        .log-reg input[type='text'],
+        .log-reg input[type='password'] {
+            width: 70%;
+            line-height: 1;
+        }
 
-    .log-reg>div span {
-        padding: 35px;
-        line-height: 1;
-        font-size: 30px;
-        color: #999;
-        float: left;
-    }
+        .log-reg .icon.iconfont {
+            font-size: 56px;
+            color: #999;
+            position: absolute;
+            right: 0;
+            top: 9px;
+            display: none;
+        }
 
-    .log-reg>div input {
-        float: left
-    }
+        .log-reg > div {
+            position: relative;
+            /* display: flex; */
+            border-bottom: 1px solid #e7e7e7;
+        }
 
-    .log-reg .loggin {
-        border-bottom: none;
-    }
+        .log-reg > div span {
+            padding: 35px;
+            line-height: 1;
+            font-size: 30px;
+            color: #999;
+            float: left;
+        }
 
-    #pwd {
-        display: none;
-    }
+        .log-reg > div input {
+            float: left
+        }
 
-    .log-reg .now .icon.iconfont {
-        display: inline-block;
-    }
+        .log-reg .loggin {
+            border-bottom: none;
+        }
+
+        #pwd {
+            display: none;
+        }
+
+        .log-reg .now .icon.iconfont {
+            display: inline-block;
+        }
 
     </style>
     <script src="js/zepto.min.js"></script>
 </head>
 
 <body ontouchstart style="background-color: #ffffff;">
-    <!--  <div class="header">
-       <div class="weui-flex tcenter">
-           <div>
-               <div><i class="fa fa-close"></i></div>
-           </div>
-           <div class="weui-flex-item">
-               <div>登录</div>
-           </div>
-           <div>
-               <div><i class="fa fa-ellipsis-h"></i></div>
-           </div>
+<!--  <div class="header">
+   <div class="weui-flex tcenter">
+       <div>
+           <div><i class="fa fa-close"></i></div>
        </div>
-   </div> -->
-    <div class="cont">
-        <div class="weui-flex tcenter logo">
-            <div class="weui-flex-item">
-                <div><img src="img/login-logo.png"></div>
-                <p class="p-loo">清华就业微主页</p>
-            </div>
-        </div>
-        <div class="tcenter log-reg">
-            <div class="clearfix">
-                <span>账号：</span>
-                <input type="text" placeholder="学号 / 工作证号" style="flex: 1" id="cardID">
-                <i class="icon iconfont icon-guanbi1"></i>
-            </div>
-            <div class="clearfix">
-                <span>密码：</span>
-                <input type="password" placeholder="请输入密码" style="flex: 1" id="keysee">
-                <input type="text" style="flex: 1" id="pwd">
-                <i class="icon iconfont icon-yincang"></i>
-            </div>
-            <div class="loggin">
-                <input type="button" value="登录" class="f34">
-            </div>
+       <div class="weui-flex-item">
+           <div>登录</div>
+       </div>
+       <div>
+           <div><i class="fa fa-ellipsis-h"></i></div>
+       </div>
+   </div>
+</div> -->
+<div class="cont">
+    <div class="weui-flex tcenter logo">
+        <div class="weui-flex-item">
+            <div><img src="img/login-logo.png"></div>
+            <p class="p-loo">清华就业微主页</p>
         </div>
     </div>
+    <div class="tcenter log-reg">
+        <div class="clearfix">
+            <span>账号：</span>
+            <input type="text" placeholder="学号 / 工作证号" style="flex: 1" id="cardID">
+            <i class="icon iconfont icon-guanbi1"></i>
+        </div>
+        <div class="clearfix">
+            <span>密码：</span>
+            <input type="password" placeholder="请输入密码" style="flex: 1" id="keysee">
+            <input type="text" style="flex: 1" id="pwd">
+            <i class="icon iconfont icon-yincang"></i>
+        </div>
+        <div class="loggin">
+            <input type="button" value="登录" class="f34">
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
-$(function() {
-    $('input').on('input', function(e) {
-        //实时监听手机号码输入框变化
-        if ($(this).val()) {
-            $(this).parent().addClass('now')
-        } else {
-            $(this).parent().removeClass('now')
-        }
-    });
-    $('.icon-guanbi1').on('click', '', function(event) {
-        $("#cardID").val("");
-        $(this).parent().removeClass('now');
-        event.preventDefault();
-        /* Act on the event */
-    });
-    $(".icon-yincang").on('click', function(event) {
-        if ($(this).attr('class') == "icon iconfont icon-xianshi") {
-            $(".icon-xianshi").removeClass('icon-xianshi').addClass('icon-yincang');
-            $("#keysee").show();
-            $("#pwd").hide();
-            return;
-        }
-        $(this).removeClass('icon-yincang').addClass('icon-xianshi');
-        $("#keysee").hide();
-        $("#pwd").val($("#keysee").val());
-        $("#pwd").show();
-        event.preventDefault();
-        /* Act on the event */
-    });
+    $(function () {
+        $('input').on('input', function (e) {
+            //实时监听手机号码输入框变化
+            if ($(this).val()) {
+                $(this).parent().addClass('now')
+            } else {
+                $(this).parent().removeClass('now')
+            }
+        });
+        $('.icon-guanbi1').on('click', '', function (event) {
+            $("#cardID").val("");
+            $(this).parent().removeClass('now');
+            event.preventDefault();
+            /* Act on the event */
+        });
+        $(".icon-yincang").on('click', function (event) {
+            if ($(this).attr('class') == "icon iconfont icon-xianshi") {
+                $(".icon-xianshi").removeClass('icon-xianshi').addClass('icon-yincang');
+                $("#keysee").show();
+                $("#pwd").hide();
+                return;
+            }
+            $(this).removeClass('icon-yincang').addClass('icon-xianshi');
+            $("#keysee").hide();
+            $("#pwd").val($("#keysee").val());
+            $("#pwd").show();
+            event.preventDefault();
+            /* Act on the event */
+        });
 
-    // $('.icon-xianshi').on('click', '', function(event) {
-    //     $("#keysee").attr('type','text');
-    //     event.preventDefault();
-    //     /* Act on the event */
-    // });
-    $(".loggin input").on('click', '', function(event) {
-        $(this).css("background", "#55b5cb")
-        event.preventDefault();
-        /* Act on the event */
+        // $('.icon-xianshi').on('click', '', function(event) {
+        //     $("#keysee").attr('type','text');
+        //     event.preventDefault();
+        //     /* Act on the event */
+        // });
+        $(".loggin input").on('click', '', function (event) {
+            $(this).css("background", "#55b5cb")
+            event.preventDefault();
+            /* Act on the event */
+        });
     });
-});
 </script>
