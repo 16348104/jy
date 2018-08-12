@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>意向地区</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="myfont/iconfont.css">
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <!--<link rel="stylesheet" href="css/weui-2.css">-->
+    <link rel="stylesheet" href="css/muban.css">
+    <script src="js/zepto.min.js"></script>
+    <style>
+        html,body{background-color: #ffffff;}
+        .clearfix {zoom: 1;}
+        .clearfix:before, .clearfix:after {display: table;line-height: 0;content: "";}
+        .clearfix:after {clear: both;}
+        .ttt{line-height: 90px;font-size: 30px;border-bottom: 1px solid #e6e6e6;padding: 0 4%;}
+        .ttt span{font-size: 28px;color: #999999;margin-left: 30px;}
+        .ddd {background-color: #f8f8f8;padding-left: 4%;padding-right: 4%;padding-bottom: 30px;}
+
+        .yixuan p {font-size: 30px;}
+        .yixuan p span {color: #999999;}
+
+        .selecteed a {margin-top: 30px;margin-right: 30px;height: 58px;line-height: 58px;display: block;font-size: 26px;border: 1px solid #0ec8e2;border-radius: .4em;float: left;padding-left: 20px;padding-right: 16px;}
+        .selecteed a i {font-size: 26px;color: #999999;padding-left: 14px;}
+
+        .paddd-yixiang{padding-bottom: 36px;}
+        .weui_cells {margin-top: 0;font-size: 28px;padding-top: 0;cursor: default;}
+        .weui_cell {padding: 0 4%;margin-top: 30px;}
+        .weui_cells_checkbox .weui_icon_checked:before{content: '';display: block;border: 1px solid #626262;padding-top: 5px;width: 28px;height: 23px;border-radius: 3px;}
+        .weui_cells_checkbox .weui_check:checked + .weui_icon_checked:before{content: '\EA08';color: #ffffff;border: 1px solid #0daedf;background-color: #0daedf;}
+
+        .shenghui{position: relative;padding: 0 4%;margin-top: 24px;}
+        .shenghui label{display: block;float: left;margin-right: 30px;margin-bottom: 30px;padding: 9px 18px;border-radius: 5px;border: 1px solid #0daedf;}
+        .shenghui label input{position: absolute;}
+        .shenghui.cc_seclet label{background-color: #0daedf;color: #ffffff;}
+
+    </style>
+</head>
+<body>
+
+<div class="ttt">
+    <p>国内<span>请选择意向省份</span></p>
+</div>
+
+
+<div class="weui_cells weui_cells_radio weui_cells_checkbox paddd-yixiang">
+    <label class="weui_cell weui_check_label" for="all" id="country">
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="all">
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>全国</p>
+        </div>
+    </label>
+
+    <label class="weui_cell weui_check_label">
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>华东地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="shandong">
+            <span class="cc" >山东</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >江苏</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >安徽</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >浙江</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >福建</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >上海</span>
+        </label>
+    </div>
+
+
+    <label class="weui_cell weui_check_label" >
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>华南地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >广东</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >广西</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >海南</span>
+        </label>
+    </div>
+
+
+    <label class="weui_cell weui_check_label" >
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>华北地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >北京</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >天津</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >河北</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >山西</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >内蒙古</span>
+        </label>
+    </div>
+
+
+    <label class="weui_cell weui_check_label" >
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>华东地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >宁夏</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >新疆</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >青海</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >陕西</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >甘肃</span>
+        </label>
+    </div>
+
+
+    <label class="weui_cell weui_check_label" >
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>华东地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >四川</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >云南</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >贵州</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >西藏</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >重庆</span>
+        </label>
+    </div>
+
+
+    <label class="weui_cell weui_check_label" >
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>东北地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >吉林</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >辽宁</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >黑龙江</span>
+        </label>
+    </div>
+
+
+    <label class="weui_cell weui_check_label" >
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check huadong" name="checkbox1" >
+            <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>港澳台地区</p>
+        </div>
+    </label>
+    <div class="shenghui clearfix">
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >香港</span>
+        </label>
+
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >澳门</span>
+        </label>
+        <label class="">
+            <input type="checkbox" class="weui_check" name="checkbox1" value="">
+            <span class="cc" >台湾</span>
+        </label>
+    </div>
+
+</div>
+
+
+<script>
+    $("#country input").click(function(event) {//debugger;
+        if(this.checked==true){
+           $("#country").siblings('').find("input").prop('checked',true);
+           /*$(this).prop('checked',true);*/
+           $(".shenghui").addClass('cc_seclet');
+        }else{
+
+           $("#country").siblings('').find("input").prop('checked',false);
+           $(".shenghui").removeClass('cc_seclet');
+
+        }
+         event.stopPropagation(); 
+    });
+    $(".weui_check_label input").click(function(event) {
+        //debugger;
+        if(this.checked==true){
+            $(this).parents(".weui_check_label").next().addClass('cc_seclet');
+        }else{
+            $(this).parents(".weui_check_label").next().removeClass('cc_seclet');
+
+        }
+    });
+ 
+</script>
+
+</body>
+</html>
+<script type="text/javascript" src="js/common.js"></script>
+
+

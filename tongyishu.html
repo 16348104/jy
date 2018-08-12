@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同意书</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+
+    <style>
+        body,html{background-color: #ffffff;}
+        /*weui样式重写*/
+        .weui-flex {display: -webkit-box;display: -webkit-flex;display: flex;}
+        .weui-flex-item {-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+        .weui_article {padding: 0;font-size: 15px;}
+
+        .weui_article p{margin: 20px 0;}
+
+        /*全局样式*/
+        .tcenter {text-align: center;}
+
+
+        .header {line-height: 110px;height: 110px;background-color: #f2f2f2;padding-left: 4.26%;padding-right: 4.26%;font-size: 36px;}
+
+        .section{padding-left: 30px;padding-right: 30px;}
+        .section p.titi{font-size: 32px;margin-top: 20px;}
+        .section p{font-size: 28px;}
+
+        .weui-agree {display: block;font-size: 16px;padding: 2.1em 30px 1.8em 30px;}
+        .weui-agree-text {color: #000000;font-size: 28px;font-weight: normal;margin-left: 16px;}
+        .weui-agree a {color: #586c94;}
+        .weui-agree input:checked {-webkit-appearance: none;}
+        .weui-agree-checkbox {background-color: #ffffff;border: 1px solid #000;border-radius: 3px;font-size: 0;height: 30px;outline: 0 none;position: relative;top: 7px;vertical-align: 0;width: 30px;vertical-align: middle;margin-bottom: 27px;}
+        .weui-agree-checkbox:checked::before {color: #09bb07;content: "\EA08";display: inline-block;font-family: "weui";font-size: 32px;font-style: normal;font-variant: normal;font-weight: normal;left: 50%;position: absolute;text-align: center;text-decoration: inherit;text-transform: none;top: 50%;transform: translate(-50%, -48%) scale(0.73);vertical-align: middle;}
+
+
+        .agree {margin-top: 34px;padding-left: 30px;padding-right: 30px;margin-bottom: 40px;}
+        .agree button {opacity: 0.5;background: url(img/log-btn-bg.png) no-repeat center;height: 106px;background-size: cover;font-size: 32px;color: #ffffff;outline: none;border:none;width: 100%;border-radius: .3em;}
+
+    </style>
+    <script src="js/zepto.min.js"></script>
+</head>
+<body ontouchstart>
+
+
+<!-- <div class="header">
+    <div class="weui-flex tcenter">
+        <div -class="weui-flex-item">
+            <div><i class="fa fa-close"></i></div>
+        </div>
+        <div class="weui-flex-item">
+            <div></div>
+        </div>
+        <div -class="weui-flex-item">
+            <div><i class="fa fa-ellipsis-h"></i></div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="section">
+    <div class="weui_article">
+        <div class="weui-flex tcenter">
+            <div class="weui-flex-item">
+                <p class="titi" style="font-weight: 600;text-align: center;margin-bottom: 40px;">《职业生涯咨询知情同意书》</p>
+            </div>
+        </div>
+        <p style="margin-top: 4px;margin-bottom: 38px;font-weight: 600;">以下是关于职业生涯咨询的一些基本约定，请仔细阅读并在下面签字表明你了解相关规定，是自愿参加咨询，并能为自己的行为负责。</p>
+        <p>1、职业生涯咨询一次为50分钟，通常需要持续而定期进行，通常为每周一次。</p>
+        <p>2、你在职业生涯咨询中提供的信息将严格保密，未经你的书面同意不会泄露给第三者。但是如果出现涉及你自己或他人的生命安全的情况（比如自杀倾向，或伤害他人的倾向等）保密制度将不能保证。</p>
+        <p>3、长期接受咨询的来访者须在每次咨询结束后预约下次的时间。来访者需按照预约时间准时到达。在未提前通知的情况下迟到，咨询师将不相应延长咨询时间。</p>
+        <p>4、来访者如果要临时取消已经预约好的咨询时间，必须至少提前2个工作日打电话或邮件通知。若没有通知到，我们将按放弃咨询处理。下次你的咨询时间，我们将安排其他人的咨询。你若仍需咨询，需打电话重新预约。</p>
+        <p>5、咨询员若有事需要改变咨询时间，至少提前2个工作日与你协商。非人为事件除外，如疾病、车祸等。</p>
+        <p>6、你有权利在任何时候中止咨询；但是，来访者如果要改变咨询时间设置，请尽早直接与咨询师协商。</p>
+        <p>7、在取得你的同意之后，面谈或会被录音、录像或会被观察，作为督导咨询员程序的一部分。所有录音或录像内容，除督导老师、咨询团队成员和咨询员本人外，在未征得你同意之前，决不会向任何人披露。在咨询结束一年后，我们会销毁有关的录音带或录像带。</p>
+    </div>
+</div>
+
+<label for="weuiAgree" class="weui-agree">
+    <input id="weuiAgree" class="weui-agree-checkbox" type="checkbox">
+
+    <span class="weui-agree-text">我同意参加职业生涯咨询。<a href="javascript:void(0);"></a></span>
+</label>
+
+<div class="tcenter agree" id="regBtn">
+    <button id="btn" disabled="disabled">继续（10s）</button>
+</div>
+
+<script>
+    window.onload = function () {
+
+        var count = 10;
+        var able;var able2;
+        var btn = $('#btn');
+        $("#weuiAgree").change(function(){
+                var that = $(this);
+                that.prop("checked",that.prop("checked"));
+                if(that.prop("checked")){
+                    that.addClass('able2');
+                    btn.prop("disabled",false);
+                    able2 = that.hasClass('able2');
+                }else{
+                    btn.prop("disabled",true);
+                    console.log("禁用")
+
+                }
+            });
+
+        var sss = setInterval(function () {
+
+            btn.html("继续（" + --count + "s）");
+            if(count <= 0){
+                btn.html("继续");
+                btn.css('opacity','1');
+                btn.addClass('able');
+                able =  $("#btn").hasClass('able');
+            }
+
+            // console.log(able)
+            // console.log(able2)
+
+            if( able && able2){
+                btn.on('click',function () {
+                    $(this).css("background","#55b5cb");
+                });
+                clearInterval(sss);
+            }
+        },1000);
+    }
+</script>
+
+</body>
+</html>
+<script type="text/javascript" src="js/common.js"></script>
+
+

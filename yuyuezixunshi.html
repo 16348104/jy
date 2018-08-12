@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>预约咨询师</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="css/weui-2.css">
+    <link rel="stylesheet" href="myfont/iconfont.css">
+    <!--<link rel="stylesheet" href="select2/dist/css/select2.min.css">-->
+    <script src="js/zepto.min.js"></script>
+    <!--<script src="select2/dist/js/select2.js"></script>-->
+    <style>
+    html,
+    body {
+        background-color: #ffffff;
+    }
+    /*weui样式重写*/
+    .done .iconfont.icon-fujian{
+        display: inline-block;
+        position: relative;
+        font-size: 38px;
+        top:-6px;
+        line-height: 1;vertical-align: middle;
+    }
+    .weui_cell.weui_cell_select.weui_select_after.file{
+        border-bottom: 1px solid #ccc;
+    }
+    .icon.iconfont.icon-dianhua1 {
+        font-size: 36px;
+        vertical-align: middle;
+        margin-right: 18px;
+    }
+
+    .weui-flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .weui-flex-item {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+
+    .weui_label {
+        font-size: 30px;
+        width: 250px;
+        color: #000000;
+        font-weight: normal;
+    }
+
+    .weui_cell {
+        padding: 26px 4%;
+        font-weight: normal;
+        background-color: #ffffff;
+    }
+
+    .weui_input {
+        font-size: 26px;
+        color: #000000;
+        font-weight: normal;
+    }
+
+    .weui_cells:before {
+        border-top: none;
+    }
+
+    .weui_cells {
+        margin-top: 0;
+        background-color: #ffffff
+    }
+
+    .weui_select {
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    .weui_cells:after {
+        border-bottom: none;
+    }
+    /*.weui_cells:before{border-top:  1px solid #CCCCCC;}*/
+
+    .weui_cell_select .weui_cell_bd:after {
+        right: 4%;
+        width: 12px;
+        height: 12px;
+    }
+    /*全局样式*/
+
+    .tcenter {
+        text-align: center;
+    }
+    /*placerholder*/
+
+    input::-webkit-input-placeholder {
+        font-size: 24px;
+        color: #999999;
+        font-weight: normal;
+    }
+
+    input::-moz-placeholder {
+        font-size: 24px;
+        color: #999999;
+        font-weight: normal;
+    }
+
+    input:-moz-placeholder {
+        font-size: 24px;
+        color: #999999;
+        font-weight: normal;
+    }
+
+    input:-ms-input-placeholder {
+        font-size: 24px;
+        color: #999999;
+        font-weight: normal;
+    }
+
+    .header {
+        line-height: 110px;
+        height: 110px;
+        background-color: #f2f2f2;
+        padding-left: 4.26%;
+        padding-right: 4.26%;
+        font-size: 36px;
+    }
+
+    .divw {
+        height: 156px;
+    }
+
+    .se-bg {
+        background-color: #efeff4;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .sere-bg {
+        height: 156px;
+        background: url(img/shouye-bg.png) no-repeat center;
+        background-size: cover;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .se-bg .se-touxiang {
+        width: 90px;
+        height: 90px;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+
+    .se-bg .se-touxiang img {
+        height: 100%;
+    }
+
+    .se-bg .se-maa {
+        margin-top: 28px;
+        color: #ffffff;
+    }
+
+    .teacher {
+        font-size: 32px;
+    }
+
+    .tel {
+        font-size: 32px;
+    }
+
+    .cont {
+        background-color: #ffffff;
+    }
+
+    .cont .tttt {
+        font-weight: bold;
+        font-size: 32px;
+        padding-left: 4%;
+        background-color: #ffffff;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .arrow {
+        position: relative;
+    }
+
+    .arrow .weui-flex-item:after {
+        content: " ";
+        display: inline-block;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        height: 12px;
+        width: 12px;
+        border-width: 2px 2px 0 0;
+        border-color: #c8c8cd;
+        border-style: solid;
+        position: relative;
+        top: -2px;
+        position: absolute;
+        top: 50%;
+        right: 4%;
+        margin-top: -3px
+    }
+
+
+    .page-bd .scdy .weui-flex {
+        padding: 0 4%;
+    }
+
+    .scdy .weui-flex {
+        font-size: 30px;
+    }
+
+    .scdy .weui-flex-item {
+        line-height: 56px;
+        padding: 14px 0;
+        padding-right: 30px;
+    }
+
+    .scdy>li {
+        border-bottom: 20px solid #efeff4;
+        border-top: 20px solid #efeff4;
+    }
+
+    .scdy .weui_cells_title.title {
+        line-height: 58px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .scdy .pp-sii {
+        font-size: 28px;
+        color: #000000;
+    }
+
+    .scdy .pp-sii span {
+        font-size: 28px;
+        color: #e99f01;
+    }
+
+    .miss-persion {
+        border-top: 1px solid #CCCCCC;
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 0px 4%;
+        font-weight: normal;
+        background-color: #ffffff;
+    }
+
+    .miss-persion input {
+        width: 100%;
+    }
+
+    .ijij {
+        line-height: 78px;
+        height: 70px;
+        border-bottom: 1px solid #ececec;
+        position: relative;
+    }
+
+    .ijij:last-child {
+        border-bottom: none;
+    }
+
+    .nanname {
+        margin-top: 16px
+    }
+
+    .ssss {
+        border-bottom: 20px solid #efeff4
+    }
+
+    .ssss .ddd {
+        font-size: 28px;
+        padding-left: 4%;
+        margin-top: 28px;
+        cursor: default;
+    }
+
+    .weui-flex-item .icon {
+        font-size: 36px;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+    }
+
+    .yuyue {
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 4%;
+    }
+
+    .yuyue input {
+        font-size: 30px;
+        outline: none;
+        width: 100%;
+        height: 106px;
+        border: none;
+        border-bottom: 1px solid #e7e7e7;
+        padding-left: 3%;
+        padding-right: 3%
+    }
+
+    .yuyue input[type='button'] {
+        color: #ffffff;
+        border-bottom: none;
+        border-radius: .3em;
+        background: url(img/log-btn-bg.png) no-repeat center;
+        height: 106px;
+        background-size: cover;
+        margin-top: 50px;
+    }
+
+    .lasld {
+        display: block;
+        height: 90px;
+        line-height: 90px;
+        font-size: 26px;
+        color: #999999;
+    }
+
+    .done .weui-flex-item {
+        color: #000000;
+        font-size: 28px;
+        margin-top: 20px;
+        line-height: 70px;
+        text-align: left;
+        margin-left: 4%;
+        padding-left: 84px;
+    }
+
+    .done .weui-flex-item.pdf {
+        background: url(img/pdf.png) no-repeat;
+    }
+
+    .done .weui-flex-item i {
+        width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-style: normal;
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .done a.delete {
+        color: #1aa2e4;
+        text-decoration: underline;
+        font-size: 30px;
+    }
+
+    select:invalid {
+        color: #999999;
+    }
+
+    select option:not(:first-child) {
+        color: #000000;
+    }
+
+    .icon.iconfont {
+        font-size: 56px;
+        color: #999;
+        position: absolute;
+        right: 0;
+        top: 9px;
+        display: none;
+    }
+
+    .now .icon.iconfont {
+        display: inline-block;
+    }
+
+    .miss-persion .icon.iconfont {
+        top: -2px;
+    }
+
+    .uploadfileff {
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .uploadfileff .fiflel-text {
+        font-size: 30px;
+        color: #000000;
+    }
+
+    .lasld .iconfont.icon-fujian {
+        font-size: 36px;
+        color: #999;
+        vertical-align: middle;
+    }
+    </style>
+    <!--<link rel="stylesheet" href="css/shouye.css">-->
+</head>
+
+<body ontouchstart>
+    <!-- <div class="header">
+    <div class="weui-flex tcenter">
+        <div >
+            <div><i class="fa fa-close"></i></div>
+        </div>
+        <div class="weui-flex-item">
+            <div>预约咨询师</div>
+        </div>
+        <div >
+            <div><i class="fa fa-ellipsis-h"></i></div>
+        </div>
+    </div>
+</div> -->
+    <div class="divw">
+        <div class="se-bg">
+            <div class="weui-flex sere-bg">
+                <div>
+                    <div class="se-touxiang">
+                        <img src="img/touxiang.png">
+                    </div>
+                </div>
+                <div class="weui-flex-item se-maa">
+                    <div class="teacher">咨询师姓名：<span>邵正隆</span></div>
+                    <div class="tel"><i class="icon iconfont icon-dianhua1"></i><span>+86 13901234567</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="tttt">请您填写或确认以下信息</div>
+        <div class="weui_cells weui_cells_form weui_cells_radio">
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">学生姓名</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请输入姓名">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">电子邮件</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="email" placeholder="请填写电子邮件">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">手机号</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="tel" required="" pattern="[0-9]{11}" maxlength="11" placeholder="请填写手机号" emptytips="请输入手机号" notmatchtips="请输入正确的手机号">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+                <div class="weui_cell_ft">
+                    <i class="weui_icon_warn"></i>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">原就读学校</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请填写（本科/硕士）就读学校">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">原专业</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="如有转换请填写">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">婚姻状况</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select required class="weui_select" name="select2" id=" ">
+                        <!--<option value="" disabled selected hidden>请选择婚姻状况</option>-->
+                        <option class="qw" value="" disabled selected hidden>请选择婚姻状况</option>
+                        <option value="1">未婚</option>
+                        <option value="2">已婚</option>
+                    </select>
+                    <!--<select class="sel_recommender" id="" name="recommenderId" data-mobile="true" style="width: 100%">-->
+                    <!--<option value="">请选择...</option>-->
+                    <!--<option value="1">选择机构类型</option>-->
+                    <!--<option value="1">选择机构类型</option>-->
+                    <!--<option value="1">选择机构类型</option>-->
+                    <!--<option value="1">选择机构类型</option>-->
+                    <!--<option value="1">选择机构类型</option>-->
+                    <!--</select>-->
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">健康状况</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">良好</option>
+                        <option value="2">已婚</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">父亲职业</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请填写父亲职业">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">母亲职业</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请填写母亲职业">
+                    <i class="icon iconfont icon-guanbi1"></i>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">是否有兄弟姐妹</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">职业咨询</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">心理咨询</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">其它咨询</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">工作经验</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="page-bd">
+                <ul class="scdy">
+                    <li class="">
+                        <div class="weui-flex js-category arrow">
+                            <p class="weui-flex-item pp-sii">你近一个月曾使用以下哪些方法了解与职业生涯 有关信息 <span>（可多选）</span></p>
+                        </div>
+                        <div class="page-category js-categoryInner">
+                            <div class="weui_cells weui_cells_checkbox">
+                                <label class="weui_cell weui_check_label" for="s11">
+                                    <div class="weui_cell_hd">
+                                        <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+                                        <i class="weui_icon_checked"></i>
+                                    </div>
+                                    <div class="weui_cell_bd weui_cell_primary">
+                                        <p>美国</p>
+                                    </div>
+                                </label>
+                                <label class="weui_cell weui_check_label" for="s12">
+                                    <div class="weui_cell_hd">
+                                        <input type="checkbox" name="checkbox1" class="weui_check" id="s12">
+                                        <i class="weui_icon_checked"></i>
+                                    </div>
+                                    <div class="weui_cell_bd weui_cell_primary">
+                                        <p>英国</p>
+                                    </div>
+                                </label>
+                                <label class="weui_cell weui_check_label" for="s13">
+                                    <div class="weui_cell_hd">
+                                        <input type="checkbox" name="checkbox1" class="weui_check" id="s13">
+                                        <i class="weui_icon_checked"></i>
+                                    </div>
+                                    <div class="weui_cell_bd weui_cell_primary">
+                                        <p>法国</p>
+                                    </div>
+                                </label>
+                                <label class="weui_cell weui_check_label" for="s14">
+                                    <div class="weui_cell_hd">
+                                        <input type="checkbox" name="checkbox1" class="weui_check" id="s14">
+                                        <i class="weui_icon_checked"></i>
+                                    </div>
+                                    <div class="weui_cell_bd weui_cell_primary">
+                                        <p>德国</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--最想解决的问题-->
+            <div class="ssss">
+                <div class="ddd">此次来最主要想解决的问题</div>
+                <div class=" weui_cells_form weui_cells_radio">
+                    <div class="weui_cell weui_cells_radio">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <textarea id="textarea" class="weui_textarea" placeholder="请填写此次来最主要想解决的问题" rows="6" style="box-sizing: border-box;border: 1px solid #cccccc;padding: 25px;font-size: 24px;"></textarea>
+                            <!--<div class="weui_textarea_counter"><span id="count">0</span>/<span id="count_max">20</span></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">期望咨询次数</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2" id="">
+                        <option value="1">良好</option>
+                        <option value="2">已婚</option>
+                    </select>
+                </div>
+            </div>
+            <!--紧急联系人-->
+            <div class=" miss-persion">
+                <div class="weui-flex" style="width: 100%">
+                    <div class="nanname">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">紧急联系人</label>
+                        </div>
+                    </div>
+                    <div class="weui-flex-item">
+                        <div class="weui_cell_bd weui_cell_primary ijij">
+                            <input class="weui_input" type="text" placeholder="请填写紧急联系人姓名">
+                            <i class="icon iconfont icon-guanbi1"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary ijij">
+                            <input class="weui_input" type="text" placeholder="请填写紧急联系人电话">
+                            <i class="icon iconfont icon-guanbi1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--附件-->
+        <div class="weui_cell weui_cell_select weui_select_after file">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">附件</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary done">
+                <label for=""><i class="icon iconfont icon-fujian"></i><span style="font-size: 26px;color: #999;">请上传简历</span></label>
+                <div style="display: none;">
+                    <div class="weui-flex-item pdf"><i>个人简历.pdf</i>
+                        <a href="" class="delete">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="weui-flex  uploadfileff" id="uploadfile">
+            <div class="">
+                <div class="lasld fiflel-text" style="width: 250px;">附件</div>
+            </div>
+            <div class="weui-flex-item">
+                <label class="lasld done">
+                    <span><i class="iconfont icon-fujian"></i> 请上传简历</span>
+                    <input class="upload" type="file" style="display:none;" id="uploadbtn">
+                </label>
+            </div>
+        </div> -->
+        <!-- 上传后的结果 -->
+        <div class="tcenter yuyue">
+            <div>
+                <input type="button" value="预约">
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        $('input').on('input', function(e) { //debugger;
+            //实时监听手机号码输入框变化
+            if ($(this).val()) {
+                $(this).parent().addClass('now')
+            } else {
+                $(this).parent().removeClass('now')
+            }
+        });
+        $('.icon-guanbi1').on('click', '', function(event) {
+            // $("#cardID").val("");
+            $(this).prev('input').val("");
+            $(this).hide();
+            event.preventDefault();
+            /* Act on the event */
+        });
+    });
+
+    // if ($("select").length != 0) {
+    //     $("select").select2({ minimumResultsForSearch: -1, placeholder: "非分值成绩" });
+    // }
+
+    var $form = $("#form");
+    $form.form();
+    $("#formSubmitBtn").on("click", function() {
+        $form.validate(function(error) {
+            if (error) {
+
+            } else {
+
+                $.toptips('验证通过提交', 'ok');
+            }
+        });
+
+    });
+    $("#uploadbtn").on('change', '', function(event) {
+        if ($("#filename").length) {
+            $("#filename").remove();
+        }
+        var path = $(this).val();
+        var zid = $(this).attr('id').match(/\d+/g);
+        // $("#label").html(path);
+
+
+
+        var pIndex = path.lastIndexOf('\\');
+        var fileExtension = path.substring(pIndex + 1);
+        var zIndex = fileExtension.lastIndexOf('\.');
+        var zExtension = fileExtension.substring(zIndex + 1);
+        // $("#uploadfile").after('<div class="weui-flex tcenter done" id="filename"><div class="weui-flex-item "'+zExtension+'>'+fileExtension+'</div></div>')
+        $("#uploadfile").html('<div class=""><div class="lasld fiflel-text" style="width: 250px;">附件</div></div><div class="weui-flex-item pdf done"><i>个人简历.pdf</i><a href="" class="delete">删除</a></div>')
+        event.preventDefault();
+        /* Act on the event */
+    });
+    $(".tcenter.yuyue input").on('click', '', function(event) {
+        $(this).css("background", "#55b5cb");
+        event.preventDefault();
+        /* Act on the event */
+    });
+    </script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

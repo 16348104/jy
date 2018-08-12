@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>毕业申请-编辑</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="myfont/iconfont.css">
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="css/weui-2.css">
+    <link rel="stylesheet" href="css/muban.css">
+    <script src="js/zepto.min.js"></script>
+
+
+</head>
+<body>
+
+<!--<div class="result">审核结果：<span>待审核</span></div>-->
+
+<!--基本信息-->
+<div class="info">
+    <div class="base-nfo">
+        <img src="img/line1.png"> <span>基本信息</span>
+    </div>
+
+
+    <div class="info-items">
+
+        <div class="weui-flex itn disable">
+            <div class="itn-le">
+                <div>学生姓名</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>孔维邦</div>
+            </div>
+        </div>
+
+        <div class="weui-flex itn disable">
+            <div class="itn-le">
+                <div>学号</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>2016873923</div>
+            </div>
+        </div>
+
+        <div class="weui-flex itn disable">
+            <div class="itn-le">
+                <div>性别</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>男</div>
+            </div>
+        </div>
+
+        <div class="weui-flex itn disable">
+            <div class="itn-le">
+                <div>院系</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>物理系</div>
+            </div>
+        </div>
+
+        <div class="weui-flex itn disable">
+            <div class="itn-le">
+                <div>专业</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>物理学</div>
+            </div>
+        </div>
+
+        <div class="weui-flex itn disable">
+            <div class="itn-le">
+                <div>培养方式</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>非定向</div>
+            </div>
+        </div>
+
+        <div class="weui-flex itn">
+            <div class="itn-le">
+                <div>毕业时间</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <div>2018.08.01</div>
+            </div>
+        </div>
+
+
+
+        <div class="weui_cell weui_cell_select weui_select_after bbbbttt">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">政治面貌</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select required="" class="weui_select" name="select2" id=" ">
+                    <option class="qw" value="" disabled selected hidden>请选择婚姻状况</option>
+                    <option value="1">党员</option>
+                    <option value="2">预备党员</option>
+                </select>
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select weui_select_after bbbbttt">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">生源地</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <i class="iconfont icon-bangzhu icon-click" style="z-index: 1000;position: absolute;right: 8%;top: 0;font-size: 36px;color: #ffc600;"></i>
+                <select required="" class="weui_select" name="select2" id="">
+                    <option class="qw" value="" disabled selected hidden>请选择生源地</option>
+                    <option value="1">生源地1</option>
+                    <option value="2">生源地2</option>
+                    <option value="2">生源地3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="weui-flex itn">
+            <div class="itn-le">
+                <div>手机号</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <input class="weui_input" type="tel" required="" pattern="[0-9]{11}" maxlength="11" placeholder="请填写手机号" emptytips="请输入手机号" notmatchtips="请输入正确的手机号">
+            </div>
+        </div>
+
+        <div class="weui-flex itn">
+            <div class="itn-le">
+                <div>电子邮箱</div>
+            </div>
+            <div class="weui-flex-item itn-rt">
+                <input class="weui_input" type="email" placeholder="请填写电子邮件">
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!--个人意向-->
+<div class="info per-top">
+    <div class="base-nfo">
+        <img src="img/line1.png"> <span>个人意向</span>
+    </div>
+
+
+    <div class="info-items">
+        <!--<p class="wenzishow"><a href="javascript:;" id="">展开全部</a></p>-->
+        <div class="weui_cell weui_cell_select weui_select_after bbbbttt">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">毕业意向</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select required="" class="weui_select" name="select2" id=" ">
+                    <option class="qw" value="" disabled selected hidden>请至少选择1个，最多选择5个</option>
+                    <option value="1">党员</option>
+                    <option value="2">预备党员</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="weui_cell weui_cell_select weui_select_after bbbbttt">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">意向地区</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select required="" class="weui_select" name="select2" id="">
+                    <option class="qw" value="" disabled selected hidden>请选择意向地区</option>
+                    <option value="1">党员</option>
+                    <option value="2">预备党员</option>
+                </select>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+<div class="weui-flex tcenter btn-one pad-l-r">
+    <!--<div class="weui-flex-item">-->
+    <!--<div class="quxiao"><input type="button" value="取消预约"></div>-->
+    <!--</div>-->
+    <div class="weui-flex-item">
+        <div class="button"><input type="button" value="提交"></div>
+    </div>
+</div>
+
+<script src="js/common.js"></script>
+<script>
+    $(function() {
+
+        $('.icon-click').on('click',function () {
+            alert("more")
+        });
+        //限制字符个数
+        $(".limit").each(function(){
+            var maxwidth=38;
+            var wezi = $(this).text();
+
+            if($(this).text().length > maxwidth){
+                $(this).text($(this).text().substring(0,maxwidth));
+                $(this).html($(this).html()+'...');
+            }
+
+            $(this).parent().parent().next('p').on('click', function(e){
+                $(this).prev().children('.weui-flex-item').children().html(wezi);
+                $(this).hide();
+            })
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的预约</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name = "format-detection" content="telephone = no" />
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="css/weui-2.css">
+    <link rel="stylesheet" href="css/muban.css">
+    <link rel="stylesheet" href="myfont/iconfont.css">
+    <style type="text/css">
+        .button input[type='button']{font-size: 28px;line-height: 80px;}
+        .page-bd .scdy .weui-flex {padding: 0px 4%;}
+    </style>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function () {
+            $('.weui_tab').tab({
+                defaultIndex: 1,
+                activeClass: 'tab-green',
+                onToggle: function (index) {
+                    if (index > 0) {
+                        // alert(index)
+                    }
+                }
+            });
+
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+
+
+
+<div class="weui_tab">
+    <div class="fiix">
+        <div class="weui_tab tabs"><!--tab-fixed添加顶部-->
+            <div class="weui_navbar">
+                <div class="weui_navbar_item tab-green">
+                    <div class="tab-na">
+                        <span -class="weui-reddot">咨询预约</span>
+                    </div>
+                </div>
+                <div class="weui_navbar_item">
+                    <div class="tab-na">
+                        <span class="weui-reddot">我的预约</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="weui_tab_bd">
+        <div class="weui_tab_bd_item" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1); display: block;">
+            11
+        </div>
+        <div class="weui_tab_bd_item" style="display: none; transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+
+
+            <div class="page-bd">
+                <ul class="scdy">
+                    <li class="js-show">
+                        <div class="weui-flex js-category">
+                            <img src="img/line1.png" alt="">
+                            <p class="weui-flex-item pp-sii">未完成<span>2</span></p>
+                            <i class="icon iconfont icon-jiantou3"></i>
+                        </div>
+                        <div class="page-category js-categoryInner">
+                           <div class="items">
+                               <div class="item">
+                                   <div class="weui-flex">
+                                       <div class="weui-flex-item">
+                                           <div class="num">预约号：<span style="color: #000;">1807230001</span></div>
+                                       </div>
+                                       <div class="weui-flex-item tright">
+                                           <div class="state">预约状态：<span class="dai">待确认</span></div>
+                                       </div>
+                                       <div class="sanjiao1"></div>
+                                   </div>
+                               </div>
+
+                               <div class="item-li">
+                                   <div class="item-li-first"><p>预约日期</p><p class="datas">2018-07-23</p></div>
+                                   <div><p>预约时间</p><p class="datas">3:00-14:00</p></div>
+                                   <div><p>咨询师</p><p class="datas">叶慧燕</p></div>
+                                   <div><p>联系电话</p><p class="datas">13900001234</p></div>
+                                   <div><p>电子邮箱</p><p class="datas">szl@tsinghua.edu.cn</p></div>
+                                   <div class="weui-flex">
+
+                                       <div >
+                                           <div>个人简历</div>
+                                       </div>
+                                       <div class="weui-flex-item">
+                                           <div class="item-lii limit" >精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理</div>
+                                       </div>
+                                   </div>
+
+
+                                   <!--展开全部-->
+                                   <p class="wenzishow"><a href="javascript:;" id="wenzishow">展开全部</a></p>
+
+                               </div>
+
+
+                               <div class="weui-flex tcenter btn-two">
+                                   <div class="weui-flex-item">
+                                       <div class="quxiao"><input type="button" value="取消预约"></div>
+                                   </div>
+                                   <div class="weui-flex-item">
+                                       <div class="button"><input type="button" value="修改预约信息"></div>
+                                   </div>
+                               </div>
+                           </div>
+
+                            <div class="items">
+                                <div class="item">
+                                    <div class="weui-flex">
+                                        <div class="weui-flex-item">
+                                            <div class="num">预约号：<span>1807230001</span></div>
+                                        </div>
+                                        <div class="weui-flex-item tright">
+                                            <div class="state">预约状态：<span class="quren">已确认</span></div>
+                                        </div>
+                                        <div class="sanjiao1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item-li">
+                                    <div class="item-li-first"><p>预约日期</p><p class="datas">2018-07-23</p></div>
+                                    <div><p>预约时间</p><p class="datas">3:00-14:00</p></div>
+                                    <div><p>咨询地点</p><p class="datas">四教301</p></div>
+                                    <div><p>咨询师</p><p class="datas">邵正隆</p></div>
+                                    <div><p>联系电话</p><p class="datas">13900001234</p></div>
+                                    <div><p>电子邮箱</p><p class="datas">szl@tsinghua.edu.cn</p></div>
+                                    <div class="weui-flex">
+
+                                        <div >
+                                            <div>个人简历</div>
+                                        </div>
+                                        <div class="weui-flex-item">
+                                            <div class="item-lii limit" >精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理</div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--展开全部-->
+                                    <p class="wenzishow"><a href="javascript:;" id="wenzishow">展开全部</a></p>
+
+                                </div>
+
+
+                                <div class="weui-flex tcenter btn-one">
+                                    <!--<div class="weui-flex-item">-->
+                                        <!--<div class="quxiao"><input type="button" value="取消预约"></div>-->
+                                    <!--</div>-->
+                                    <div class="weui-flex-item">
+                                        <div class="button"><input type="button" value="咨询评价"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="weui-flex js-category">
+                            <img src="img/line1.png" alt="">
+                            <p class="weui-flex-item pp-sii">
+                                已完成
+                                <!--<span>2</span>-->
+                            </p>
+                            <i class="icon iconfont icon-jiantou3"></i>
+                        </div>
+                        <div class="page-category js-categoryInner">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="weui-flex">
+                                        <div class="weui-flex-item">
+                                            <div class="num">预约号：<span>1807230001</span></div>
+                                        </div>
+                                        <div class="weui-flex-item tright">
+                                            <div class="state">预约状态：<span class="done">已完成</span></div>
+                                        </div>
+                                        <!--<div class="sanjiao1"></div>-->
+                                    </div>
+                                </div>
+
+                                <div class="item-li">
+                                    <div class="item-li-first"><p>预约日期</p><p class="datas">2018-07-23</p></div>
+                                    <div><p>预约时间</p><p class="datas">3:00-14:00</p></div>
+                                    <div><p>咨询地点</p><p class="datas">四教301</p></div>
+                                    <div><p>咨询师</p><p class="datas">叶慧燕</p></div>
+                                    <div><p>联系电话</p><p class="datas">13900001234</p></div>
+                                    <div><p>电子邮箱</p><p class="datas">szl@tsinghua.edu.cn</p></div>
+                                    <div class="weui-flex">
+
+                                        <div >
+                                            <div>个人简历</div>
+                                        </div>
+                                        <div class="weui-flex-item">
+                                            <div class="item-lii limit" >精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理</div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--展开全部-->
+                                    <p class="wenzishow"><a href="javascript:;" id="wenzishow">展开全部</a></p>
+
+                                </div>
+
+
+                                <!--<div class="weui-flex tcenter">-->
+                                    <!--<div class="weui-flex-item">-->
+                                    <!--<div class="quxiao"><input type="button" value="取消预约"></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="weui-flex-item">-->
+                                    <!--<div class="button"><input type="button" value="修改预约信息"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+
+                            <div class="items">
+                                <div class="item">
+                                    <div class="weui-flex">
+                                        <div class="weui-flex-item">
+                                            <div class="num">预约号：<span>1807230001</span></div>
+                                        </div>
+                                        <div class="weui-flex-item tright">
+                                            <div class="state">预约状态：<span class="done">已完成</span></div>
+                                        </div>
+                                        <!--<div class="sanjiao1"></div>-->
+                                    </div>
+                                </div>
+
+                                <div class="item-li">
+                                    <div class="item-li-first"><p>预约日期</p><p class="datas">2018-07-23</p></div>
+                                    <div><p>预约时间</p><p class="datas">3:00-14:00</p></div>
+                                    <div><p>咨询地点</p><p class="datas">四教301</p></div>
+                                    <div><p>咨询师</p><p class="datas">叶慧燕</p></div>
+                                    <div><p>联系电话</p><p class="datas">13900001234</p></div>
+                                    <div><p>电子邮箱</p><p class="datas">szl@tsinghua.edu.cn</p></div>
+                                    <div class="weui-flex">
+
+                                        <div >
+                                            <div>个人简历</div>
+                                        </div>
+                                        <div class="weui-flex-item">
+                                            <div class="item-lii limit" >精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理精准匹配行业内明星导师，为学员提供专业的课程规划建议。课程涵盖目标行业知识点系统化梳理简历统化梳理</div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--展开全部-->
+                                    <p class="wenzishow"><a href="javascript:;" id="wenzishow">展开全部</a></p>
+
+                                </div>
+
+
+                                <!--<div class="weui-flex tcenter">-->
+                                    <!--<div class="weui-flex-item">-->
+                                    <!--<div class="quxiao"><input type="button" value="取消预约"></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="weui-flex-item">-->
+                                    <!--<div class="button"><input type="button" value="修改预约信息"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        /*$('.js-category').click(function() {
+            $parent = $(this).parent('li');
+            if ($parent.hasClass('js-show')) {
+                $parent.removeClass('js-show');
+                $(this).children('i').removeClass('icon-35').addClass('icon-74');
+            } else {
+                $parent.siblings().removeClass('js-show');
+                $parent.addClass('js-show');
+                $(this).children('i').removeClass('icon-74').addClass('icon-35');
+                $parent.siblings().find('i').removeClass('icon-35').addClass('icon-74');
+            }
+        });*/
+
+
+        //限制字符个数
+        $(".limit").each(function(){//debugger;
+            var maxwidth=38;
+            var wezi = $(this).text();
+
+            if($(this).text().length > maxwidth){
+                $(this).text($(this).text().substring(0,maxwidth));
+                $(this).html($(this).html()+'...');
+            }
+            
+            $(this).parent().parent().next('p').on('click', function(e){//debugger;
+               
+                if($(this).find("a").text()=="展开全部"){
+                     $(this).prev().children('.weui-flex-item').children().html(wezi);
+                     $(this).find("a").text("收起")
+                }else{
+                    var limit=$(this).siblings('.weui-flex').find(".limit");
+                     $(limit).text($(limit).text().substring(0,maxwidth));
+                     $(limit).html($(limit).html()+'...');
+                     $(this).find("a").text("展开全部")
+                }
+            })
+        });
+        $(".button input").on('click',function () {
+            $(this).css("background","#55b5cb");
+        });
+        $(".quxiao input").on('click',function () {
+            $(this).css({"background":"#82d1e0","color":"#fff"});
+        });
+
+
+
+    });
+</script>
+</body>
+</html>
+<script type="text/javascript" src="js/common.js"></script>

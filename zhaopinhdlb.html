@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="css/weui-2.css">
+    <link rel="stylesheet" href="css/shouye.css">
+    <link rel="stylesheet" href="myfont/iconfont.css">
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <style type="text/css">
+         .right-triangle {display: none;z-index: 100;right: 4%;top: 90px;position: absolute;width: 0;height: 0;border-width: 16px;border-style: solid;border-color:#ccc transparent  transparent  transparent ;}
+         /*.right-triangle.border{border-color: #ccc transparent transparent  transparent;}*/
+         .right-triangle:after {content: '';position: absolute;top: -18px;left: -16px;border-width: 16px;border-style: solid;border-color:#fff transparent transparent  transparent ;}
+         .weui_cells:before{border-top: none;}
+         .weui_cell:nth-child(2):before{border-top: none;}
+
+        html,body{background-color: #ffffff;}
+
+         .zhid{color: #55b5ca!important;}
+        .weui_cells:after{border-bottom: 1px solid #cccccc; bottom: 1px;}
+         .weui_cell_select .weui_cell_bd:after{right: 4%;}
+
+    </style>
+</head>
+
+<body>
+    <div class="weui-flex pd4 zp" style="position: relative;z-index: 10;background: #fff;">
+        <p class="weui-flex-item"><img src="img/title-side.png" alt=""><span class="title titititi">订阅的单位</span></p>
+        <i class="icon iconfont icon-sousuo" id="ss"></i>
+
+        <div class="right-triangle"></div>
+    </div>
+    <div class="grey"></div>
+
+    <div class="droppanel weui_cells weui_cells_form">
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label class="weui_label">职位名称</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="" value="私募股权投资经理">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label class="weui_label">单位名称</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="" value="华原（广州）教育科技发展有限公司">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label class="weui_label">工作地点</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="" value="广东省广州市">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd">
+                <label class="weui_label">单位性质</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select2"  required="" >
+                    <option class="qw" value="" disabled selected hidden>请选择</option>
+                    <option value="1">国有</option>
+                    <option value="2">私有</option>
+                    <option value="3">外企</option>
+                </select>
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd">
+                <label class="weui_label">单位行业</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select2"  required="" >
+                    <option value="" selected disabled hidden>请选择</option>
+                    <option value="1">国有</option>
+                    <option value="2">私有</option>
+                    <option value="3">外企</option>
+                </select>
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd">
+                <label class="weui_label">职位类型</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select2"  required="" >
+                    <option value="" selected disabled hidden="">请选择</option>
+                    <option value="1">国有</option>
+                    <option value="2">私有</option>
+                    <option value="3">外企</option>
+                </select>
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd">
+                <label class="weui_label">职位性质</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select2"  required="" >
+                    <option value="" selected disabled >请选择</option>
+                    <option value="1">国有</option>
+                    <option value="2">私有</option>
+                    <option value="3">外企</option>
+                </select>
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd">
+                <label class="weui_label">学历要求</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select2"  required="" >
+                    <option value="" selected disabled >请选择</option>
+                    <option value="1">国有</option>
+                    <option value="2">私有</option>
+                    <option value="3">外企</option>
+                </select>
+            </div>
+        </div>
+        <ul class="footbar">
+            <a href="">取消</a>
+            <a href="">重置</a>
+            <a href="">搜索</a>
+
+        </ul>
+    </div>
+    <a href="">
+        <div class="weui_cells zp">
+            <div class="weui_cells_title title zhid">学术就业相关资讯</div>
+            <div class="weui_cell pd4 jg">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>清华大学学生职业发展指导中心</p>
+                </div>
+                <div class="weui_cell_ft">
+                    北京市
+                </div>
+            </div>
+            <div class="weui_cell pd4 belong">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>地方政府</p>
+                </div>
+                <div class="weui_cell_ft">
+                    2018-07-20
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="weui_cells zp">
+            <div class="weui_cells_title title">全国各地选调生招录、事业单位人才引进信息汇总</div>
+            <div class="weui_cell pd4 jg">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>清华大学学生职业发展指导中心</p>
+                </div>
+                <div class="weui_cell_ft">
+                    北京市
+                </div>
+            </div>
+            <div class="weui_cell pd4 belong">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>地方政府</p>
+                </div>
+                <div class="weui_cell_ft">
+                    2018-07-20
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="weui_cells zp">
+            <div class="weui_cells_title title">学术就业相关资讯</div>
+            <div class="weui_cell pd4 jg">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>清华大学学生职业发展指导中心</p>
+                </div>
+                <div class="weui_cell_ft">
+                    北京市
+                </div>
+            </div>
+            <div class="weui_cell pd4 belong">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>地方政府</p>
+                </div>
+                <div class="weui_cell_ft">
+                    2018-07-20
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="weui_cells zp">
+            <div class="weui_cells_title title">实习/全职 量化研究员 陸家嘴 校友创办</div>
+            <div class="weui_cell pd4 jg">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>杭州弈智投资管理有限公司</p>
+                </div>
+                <div class="weui_cell_ft">
+                    上海市浦东新区
+                </div>
+            </div>
+            <div class="weui_cell pd4 belong">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>民营企业 | 本科、博士、硕士</p>
+                </div>
+                <div class="weui_cell_ft">
+                    2018-07-20
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="weui_cells zp">
+            <div class="weui_cells_title title">私募股权投资经理</div>
+            <div class="weui_cell pd4 jg">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>华原（广州）教育科技发展有限公司</p>
+                </div>
+                <div class="weui_cell_ft">
+                    广东省广州市
+                </div>
+            </div>
+            <div class="weui_cell pd4 belong">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>民营企业 | 博士、硕士</p>
+                </div>
+                <div class="weui_cell_ft">
+                    2018-07-20
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="weui_cells zp">
+            <div class="weui_cells_title title">管理培训生</div>
+            <div class="weui_cell pd4 jg">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>中信证券股份有限公司北京东直门证券营业部</p>
+                </div>
+                <div class="weui_cell_ft">
+                    北京市东城区
+                </div>
+            </div>
+            <div class="weui_cell pd4 belong">
+                <div class="weui_cell_bd weui_cell_primary ">
+                    <p>地方政府</p>
+                </div>
+                <div class="weui_cell_ft">
+                    2018-07-20
+                </div>
+            </div>
+        </div>
+    </a>
+</body>
+
+</html>
+<script type="text/javascript">
+    $("#ss").on('click', '', function(event) {
+        //debugger;
+        if($(".droppanel").css('display')=='none'){
+            $(".droppanel").addClass('show');
+            $(".titititi").html('职位搜索');
+            $('.grey').css({"display":'block'});
+            $('.right-triangle').css({"display":'block'});
+        }else{
+            $(".droppanel").removeClass('show');
+            $('.grey').css({"display":'none'});
+            $('.right-triangle').css({"display":'none'});
+            $(".titititi").html('职位搜索');
+        }
+        
+        event.preventDefault();
+        /* Act on the event */
+    });
+</script>
+<script type="text/javascript" src="js/common.js"></script>

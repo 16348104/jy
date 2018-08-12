@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>已完成页面</title>
+    <script type="text/javascript" src="js/template.js"></script>
+    <style>
+    body {
+        -webkit-user-select: text;
+
+        -moz-user-select: text;
+
+        -ms-user-select: text;
+
+        user-select: text;
+    }
+
+    .title {
+        line-height: 36px;
+        background: #1392f1;
+        color: #fff;
+        padding-left: 30px;
+    }
+
+    .content {
+        margin: 0 auto;
+    }
+
+    .panelhead {
+        border-bottom: 1px dashed #c4c4c4;
+        padding-left: 5px;
+        line-height: 36px;
+    }
+
+    .panelbody {
+        margin-bottom: 30px;
+    }
+
+    .panelbody a {
+        line-height: 36px;
+        color: #1392f1;
+        float: left;
+        margin-right: 70px;
+        position: relative;
+    }
+
+    .panelbody a>.tipmore {
+        position: absolute;
+        right: -55px;
+        top: 2px;
+        font-size: 10px;
+        line-height: 1;
+        padding: 2px 5px;
+        width: 50px;
+    }
+
+    .panelbody a .tipmore>span {
+        display: inline-block;
+    }
+
+    .panelbody a .tipmore>span.done {
+        color: #57b31f;
+        border: 1px solid #57b31f;
+    }
+
+    .panelbody a .tipmore>span.doing {
+        color: #1392f1;
+        border: 1px solid #1392f1;
+    }
+
+    .panelbody a .tipmore>span.do {
+        color: #f5ae25;
+        border: 1px solid #f5ae25;
+    }
+
+    .panelbody a:hover {
+        opacity: 0.8
+    }
+
+    .box {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background: #f5ae25;
+    }
+
+    .box.done {
+        background: #57b31f;
+    }
+
+    .box.doing {
+        background: #1392f1;
+    }
+
+    .box.tijiao {
+        background: #e615da;
+    }
+
+    .tip {
+        padding: 20px 0;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .tip span {
+        margin-right: 30px;
+    }
+
+    .design {
+        color: red;
+    }
+
+    .tijiao {
+        color: #e615da
+    }
+
+    .finished {
+        color: #999999;
+    }
+
+    .line {
+        border-bottom: 1px solid #f50;
+    }
+
+    .boxs {
+        position: absolute;
+        right: 0;
+        top: 90px;
+        width: 500px;
+        border: 1px solid #eee;
+        padding-bottom: 10px;
+        background: #fff;
+    }
+
+    .boxs p {
+        padding-top: 10px;
+        line-height: 1;
+        padding-left: 5px;
+        font-size: 12px;
+    }
+
+    .boxs .title {
+        color: #aaa;
+        background: #fff;
+        font-size: 14px;
+    }
+
+    .boxs .title a {
+        color: #1392f1
+    }
+
+    .tip {
+        color: #f5ae25;
+    }
+    .clearfix:before,.clearfix:after {
+   content:"";
+   display:table;
+}
+.clearfix:after { clear:both; }
+    </style>
+</head>
+<script src="js/zepto.min.js"></script>
+<body class="">
+    
+    <div class="title">已完成页面</div>
+    <div class="tip">
+        <span><i class="box done"></i>已提交</span>
+        <span><i class="box doing"></i>有修改</span>
+        <span><i class="box do"></i>待测</span>
+        <span><i class="box tijiao"></i>可提交</span>
+    </div>
+
+
+    
+    <div class="content" style="background: #efefef;padding: 10px;">
+        <div class="title">待提交</div>
+        <div class="content" id="buchxiugai"></div>
+        <div class="content" id="content41"></div>
+    </div>
+    
+    <div class="content" id="tanchuang"></div>
+    <div class="content">
+        <div class="panelhead"> 组件（仅供测试课内搜索弹出逻辑，搜索框内输入文字，点击回车）</div>
+        <div class="panelbody clearfix">
+            <a href="kechengsousuo(kenei).html">网络学堂 - 课内搜索
+                <div class="tipmore">
+                    <span class="done">已提交</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="boxs content">
+        <div class="title" style="background: #f5ae25;color: #fff">提示</div>
+        <p>● yyy按钮不可用状态的class“btn”后加 disabled</p>
+        <p class="title">● 日期控件初始化赋值</p>
+        <p>laydate.render({ elem: '#test19' ,value: '1989-10-14'});</p>
+        <p class="title">● 弹窗参数地址 <a href="http://www.jq22.com/jquery-info10061" target="_blank">参数地址</a><span class="tip">去掉遮罩，zeroModal.show(增加overlay: false配置,</span></p>
+        <p class="title">● 验证插件的使用</p>
+        <p>参考 <a href="xinzengwenjian.html" target="_blank">新增文件</a></p>
+        <p class="title">● 左边icon对照表已出</p>
+        <p>查看myfonts文件下的<a href="myfonts/ICON-shuoming(houtaikan).txt" target="_blank">txt说明</a> <a href="demo.html" target="_blank">fonticon对照表</a></p>
+        <p class="title">● datatable内表格中文字超一行需要做截断的调用common.js中的tosubstr</p>
+        <p style="text-indent: 2em;"> 1 无法调用的在链接处加上class="hover"</p>
+        <p style="text-indent: 2em;"> 2 页面调用qtip.css,qtip.js,程序内调用toqtip(".hover");</p>
+        <p><a href="kechengzuoyeliebiao.html" target="_blank">课程作业列表</a><span class="tip">参考页面 </span></p>
+        <p class="title">已有附件显示图标<span class="tip">adhere后面加相应文件后缀</span></p>
+        <p>&lt;div class="adhere xlsx"&gt;&lt;div class="fl bg-img"&gt;&lt;/div&gt;&lt;div class="txt fl"&gt;&lt;a href=""&gt;会议系统管理.xlsx</p>
+    </div> -->
+    <script type="text/html" id="contentlist1">
+        <ul style="">
+            <div class="panelhead">{{head}}
+            </div>
+            <div class="panelbody clearfix">
+                {{each list value index}}
+                <a href="{{value.link}}">
+                {{value.title}}
+                <div class="tipmore">
+                    <!--{{if value.state==110}}-->
+                    <!--<span class="done">已提交</span>-->
+                    <!--{{/if}}{{if value.state==0}}-->
+                    <!--<span class="tijiao">可提交</span>-->
+                    <!--{{/if}}-->
+
+                    {{if value.state==1}}
+                    <span class="doing">1次修改</span>
+                    {{/if}}{{if value.state==2}}
+                    <span class="doing">2次修改</span>
+                    {{/if}}{{if value.state==3}}
+                    <span class="doing">3次修改</span>
+                    {{/if}}{{if value.state==4}}
+                    <span class="doing">4次修改</span>
+                    {{/if}}{{if value.state==5}}
+                    <span class="doing">5次修改</span>
+                    {{/if}}{{if value.state>=6&&value.state!=99&&value.state!=999}}
+                    <span class="doing">{{value.state}}次修改</span>
+                    {{/if}}
+
+                    {{if value.state==999}}
+                    <span class="design">重新设计</span>
+                    {{/if}}
+                    <!--{{if value.state==12}}-->
+                    <!--<span class="do">待测</span>-->
+                    <!--{{/if}}-->
+
+
+                    {{if value.oldstate==0}}
+                    <span class="done">已提交</span>
+                    {{/if}}{{if value.oldstate==1}}
+                    <span class="tijiao">可提交</span>
+                    {{/if}}
+                    {{if value.state==99}}
+                    <span class="do">待测</span>
+                    {{/if}}
+                    {{if value.oldstate!=0&&value.oldstate!=1&&value.oldstate!=99}}
+                        <span class="done">{{value.oldstate}}</span>
+                    {{/if}}
+                </div>
+            </a> {{/each}}
+            </div>
+        </ul>
+    </script>
+    <script type="text/javascript">
+    var data0525buch = {
+        head: ' 网络学堂-全部最新设计稿 - 新页面20180525',
+        list: [
+            
+            { title: "网络学堂 - 合教助教设置 - 新增教师", link: "xinzengjiaoshi.html", state: 999  },
+            { title: "网络学堂 - 邮件提醒设置", link: "headuploadtouxiang.html", oldstate: 0  },
+
+
+        ]
+    }
+    var html = template('contentlist1', data0525buch);
+    document.getElementById('buchxiugai').innerHTML = html;
+
+    var data41 = {
+        head: ' 网络学堂-全部最新设计稿 - 20180611课程公告 - 新增内容',
+        list: [
+            { title: "网络学堂 - 课程公告 - 浏览详情", link: "kechenggonggao-liulanxiangqing.html", oldstate: 0 },
+            { title: "网络学堂 - 课程公告 - 浏览详情-查看浏览弹窗", link: "zeromodal.html", oldstate: 0 },
+            { title: "网络学堂 - 学生分组设置 - 修改组名弹窗", link: "zeromodal.html", oldstate: 0 },
+            { title: "网络学堂 - 课程首页-暂无数据", link: "kechengshouye-null.html", oldstate: 0 },
+        ]
+    }
+    var html = template('contentlist1', data41);
+    document.getElementById('content41').innerHTML = html;
+
+    var tanchuangdata = {
+        head: ' 20180420 - 功能弹窗',
+        list: [
+            { title: "所有弹窗", link: "zeromodal.html", oldstate: 0 }, { title: "操作提示弹窗", link: "xitongtanchuang.html", oldstate: 0 },
+        ]
+    }
+    var html = template('contentlist1', tanchuangdata);
+    document.getElementById('tanchuang').innerHTML = html;
+
+
+
+    </script>
+</body>
+
+</html>

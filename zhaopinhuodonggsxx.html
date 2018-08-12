@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="css/weui-2.css">
+    <link rel="stylesheet" href="css/shouye.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="myfont/iconfont.css">
+
+    <script src="js/zepto.min.js"></script>
+</head>
+
+<body class="zpxx">
+<div class="weui_panel weui_panel_access">
+    <!-- <div class="weui_panel_hd">文字组合列表</div> -->
+    <div class="weui_panel_bd pd4">
+        <div class="weui_media_box weui_media_text">
+            <h4 class="weui_media_title fontt">私募股权投资经理</h4>
+            <div class="weui_media_desc weui-flex">
+                <div class="weui-flex-item">职位性质：全职</div>
+                <div class="weui-flex-item">职位类别：经济业务人员</div>
+            </div>
+            <div class="weui_media_desc weui-flex icon-ccoco">
+                <div class="weui-flex-item"><i class='iconfont icon-didian'></i>广东省广州市</div>
+                <div class="weui-flex-item"><i class='iconfont icon-boshimao'></i>博士、硕士</div>
+            </div>
+            <ul class="weui_media_info">
+                <li class="weui_media_info_meta">更新时间： 2018.07.20</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">浏览次数：157</li>
+            </ul>
+        </div>
+    </div>
+    <!-- <a href="javascript:void(0);" class="weui_panel_ft">查看更多</a> -->
+</div>
+<div class="weui_panel weui_panel_access">
+    <!-- <div class="weui_panel_hd">文字组合列表</div> -->
+    <div class="weui_panel_bd pd4 details">
+        <div class="weui_media_box weui_media_text">
+            <h4 class="weui_media_title font30">华原（广州）教育科技发展有限公司</h4>
+            <!-- <div class="weui_media_desc weui-flex">
+                <div class="weui-flex-item">职位性质：全职</div>
+                <div class="weui-flex-item">职位类别：经济业务人员</div>
+            </div>
+            <div class="weui_media_desc weui-flex">
+                <div class="weui-flex-item">广东省广州市</div>
+                <div class="weui-flex-item">职位类别：经济业务人员</div>
+            </div> -->
+            <ul class="weui_media_info">
+                <li class="weui_media_info_meta">300~500人</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">民营企业</li>
+                <li class="weui_media_info_meta weui_media_info_meta_extra">教育</li>
+            </ul>
+            <div class="detail limit">
+                2018年，我司推出China Dream业务，致力于引入海外创业、就业、留学等人才，导出国内劳动力，以人才结构为切入点来解决国内外不均衡发展的时代问题。
+                2018年，我司推出China Dream业务，致力于引入海外创业、就业、留学等人才，导出国内劳动力，以人才结构为切入点来解决国内外不均衡发展的时代问题。
+            </div>
+            <div class="zhankai">
+                <p class="over">
+                    <span>展开全部</span>
+                </p>
+
+                <!--<p class="wenzishow over"><a href="javascript:;" id="wenzishow">展开全部</a></p>-->
+            </div>
+        </div>
+    </div>
+    <!-- <a href="javascript:void(0);" class="weui_panel_ft">查看更多</a> -->
+</div>
+<div class="weui_panel weui_panel_access occupation">
+    <div class="weui_cells sc">
+        <div class="weui_cells_title title">职位描述</div>
+    </div>
+    <div class="pd4">
+        <ul>
+            <li class="hdtitle">一、招聘岗位</li>
+            <li>金融学、财务管理、会计等相关专业应届毕业生2名。</li>
+        </ul>
+        <ul>
+            <li class="hdtitle">二、招聘条件</li>
+            <li>1、国内全日制普通高等院校2018年本科及以上学以上历应届毕业生，且入职时获得毕业证、学位证、就业报到证;</li>
+            <li>2、具有中华人民共和国国籍，遵纪守法、诚实守信，无违法、违规、违纪等不良记录;</li>
+            <li>3、德才兼备、品学兼优，具有良好的学习和研究分析能力、语言与文字表达能力、组织协调能力和团组织协调和团组织协调和团组织协调能力和团结合作意识，能够承担工作压力。</li>
+        </ul>
+        <ul class="mail">
+            <li class="hdtitle">三、简历投递</li>
+            <li>接收简历邮箱：mahuayuan001@163.com</li>
+            <li>联系电话：<span class="text_000">18824128352</span></li>
+            <li>投递简历截止日期：<span class="red">2018.08.12</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="po-eew">
+   <div class="fixdi">
+       <ul class="footbar">
+           <a href="">
+               <i class="icon iconfont icon-shoucang"></i>
+               <p>收藏</p>
+
+           </a>
+           <a href=""><i class="icon iconfont icon-dingyue"></i>
+               <p>订阅</p>
+           </a>
+           <a href="">
+               <span>投递简历</span>
+           </a>
+       </ul>
+   </div>
+</div>
+
+
+</body>
+<script>
+    $(function() {
+
+        //限制字符个数
+        $(".limit").each(function(){
+            var maxwidth=100;
+            var wezi = $(this).text();
+
+            if($(this).text().length > maxwidth){
+                $(this).text($(this).text().substring(0,maxwidth));
+                $(this).html($(this).html()+'');
+            }
+
+            $(this).next().children().children().on('click', function(e){
+
+                if($(this).text()=="展开全部"){
+                    $(this).parent().parent().prev().html(wezi);
+                    $(this).text("收起")
+                }else{
+                    $('.limit').text($('.limit').text().substring(0,maxwidth));
+                    $('.limit').html($('.limit').html()+'');
+                    $(this).text("展开全部")
+                }
+            })
+        });
+
+
+    });
+
+</script>
+</html>
+<script type="text/javascript" src="js/common.js"></script>

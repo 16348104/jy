@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>毕业意向</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weui-0.4.3.css">
+    <link rel="stylesheet" href="css/weui-2.css">
+    <!--<link rel="stylesheet" href="css/muban.css">-->
+    <link rel="stylesheet" href="myfont/iconfont.css">
+    <script src="js/zepto.min.js"></script>
+    <style>
+        .clearfix {zoom: 1;}
+        .clearfix:before, .clearfix:after {display: table;line-height: 0;content: "";}
+        .clearfix:after {clear: both;}
+
+        .ddd {background-color: #f8f8f8;padding-left: 4%;padding-right: 4%;padding-bottom: 30px;}
+
+        .yixuan {}
+        .yixuan p {font-size: 30px;}
+        .yixuan p span {color: #999999;}
+
+        .selecteed {}
+        .selecteed a {margin-top: 30px;margin-right: 30px;height: 58px;line-height: 58px;display: block;font-size: 26px;border: 1px solid #0ec8e2;border-radius: .4em;float: left;padding-left: 20px;padding-right: 16px;}
+        .selecteed a i {font-size: 26px;color: #999999;padding-left: 14px;}
+
+        .paddd-yixiang{padding-bottom: 36px;}
+        .weui_cells {margin-top: 0;font-size: 28px;}
+        .weui_cell {padding: 25px 4%;}
+        .weui_cells_checkbox .weui_icon_checked:before{content: '';display: block;border: 1px solid #626262;padding-top: 5px;width: 28px;height: 23px;border-radius: 3px;}
+        .weui_cells_checkbox .weui_check:checked + .weui_icon_checked:before{content: '\EA08';color: #ffffff;border: 1px solid #0daedf;background-color: #0daedf;}
+
+    </style>
+</head>
+<body>
+
+
+<div class="ddd">
+    <div class="yixuan">
+        <p>已选意向：<span>（请至少选择一个意向，最多选择5个意 向并按照意愿由高到低选择）</span></p>
+    </div>
+    <div class="selecteed clearfix">
+        <!-- <a>创业<i class="iconfont icon-guanbi"></i></a>
+        <a>三资企业<i class="iconfont icon-guanbi"></i></a>
+        <a>其它事业单位<i class="iconfont icon-guanbi"></i></a>
+        <a>国有企业<i class="iconfont icon-guanbi"></i></a>
+        <a>自由职业<i class="iconfont icon-guanbi"></i></a> -->
+    </div>
+</div>
+
+
+<div class="weui_cells weui_cells_radio weui_cells_checkbox paddd-yixiang">
+    <label class="weui_cell weui_check_label" for="s11">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>国内深造</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s11" -checked="checked" value="国内深造">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s12">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>出国深造</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s12" value="出国深造">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s13">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>出国就业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s13" value="出国就业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s10">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>创业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s10" value="创业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s14">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>自由职业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s14" value="自由职业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s15">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>国有企业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s15" value="国有企业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s16">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>三资企业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s16" value="三资企业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s17">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>民营企业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s17" value="民营企业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s18">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>民营企业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s18" value="民营企业">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s19">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>高校</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s19" value="高校">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s20">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>高校</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s20" value="高校">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s21">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>科研单位</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s21" value="科研单位">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s22">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>其它事业单位</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s22">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s23">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>创业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s23">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s24">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>中央政府</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s24">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s25">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>地方政府</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s25">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s26">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>军队</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s26">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s27">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>定向选调生</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s27">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s28">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>大学生村官</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s28">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s29">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>科研助理</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s29">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s30">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>预征入伍</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s30">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="s31">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>不就业</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="weui_check" name="checkbox1" id="s31">
+            <i class="weui_icon_checked"></i>
+        </div>
+    </label>
+
+</div>
+
+<script>
+    $(function () {
+
+        $("input").click(function () {debugger;
+                if($(".selecteed").find('a').length>4){
+                    $(this).prop('checked',false);
+                    return;
+                }
+                if (this.checked === true) {
+                    $(this).prop('checked', true);
+                    $(this).parent().addClass('cc_seclet');
+                    var val = $(this).val();
+                    var aid=$(this).attr('id');
+                    $('.selecteed').append('<a id="d'+aid+'">' + val + '<i class="iconfont icon-guanbi" onclick=deletedom("'+aid+'",this)></i></a>');
+                    console.log($('.selecteed a').length);
+                } else {debugger;
+                    $(this).prop('checked', false);
+                    var aid=$(this).attr('id');
+                    $("#d"+aid).remove();
+                    // $('.selecteed').children().empty('<a>' + val + '<i class="iconfont icon-guanbi"></i></a>');
+                }
+            }
+        )
+    })
+</script>
+</body>
+</html>
+<script type="text/javascript" src="js/common.js"></script>
