@@ -195,7 +195,7 @@ textarea:-ms-input-placeholder{  font-size: 24px;color: #999999;font-weight: nor
 .info-items .wenzishow{font-size: 24px;/* bottom:20px;position: absolute;right: 0; */padding-right: 4%;text-align: right;}
 .item-lii {text-align: justify;}
 .fixed-btn{position: relative;height: 106px;background-color: #ffffff;margin-top: 40px;}
-.btunn{position: fixed;bottom: 0;width: 100%;background-color: #ffffff;border-top: 1px solid #CCCCCC;}
+.btunn{position: fixed;bottom: 0;width: 100%;background-color: #ffffff;border-top: 1px solid #CCCCCC;box-shadow: 0 -4px 10px 0 rgba(0,0,0,0.1);}
 .btunn input{font-size: 28px;width: 100%;}
 
 /*.fixed-btn.yishen{height: 106px;}*/

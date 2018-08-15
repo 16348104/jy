@@ -121,7 +121,7 @@ textarea {  -webkit-appearance: none;}
 
 
 .po-eew{position: relative;height: 106px;background-color: #ffffff;}
-.po-eew .fixdi{position: fixed;bottom: 0;width: 100%;background-color: #ffffff;}
+.po-eew .fixdi{position: fixed;bottom: 0;width: 100%;background-color: #ffffff;box-shadow: 0 -4px 10px 0 rgba(0,0,0,0.1);}
 .zpxx .footbar{display: flex;align-items:center; justify-content:center;}
 .zpxx .footbar .icon{font-size: 36px;}
 .zpxx .footbar .icon +p{margin-top: 5px;}

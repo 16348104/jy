@@ -332,7 +332,7 @@
     .done .weui-flex-item {
         color: #000000;
         font-size: 28px;
-        margin-top: 20px;
+        /* margin-top: 20px; fujian*/
         line-height: 70px;
         text-align: left;
         margin-left: 4%;
@@ -689,12 +689,8 @@
                 <label for="" class="weui_label">附件</label>
             </div>
             <div class="weui_cell_bd weui_cell_primary done">
-                <label for=""><i class="icon iconfont icon-fujian"></i><span style="font-size: 26px;color: #999;">请上传简历</span></label>
-                <div style="display: none;">
-                    <div class="weui-flex-item pdf"><i>个人简历.pdf</i>
-                        <a href="" class="delete">删除</a>
-                    </div>
-                </div>
+                <label for="uploadbtn"><i class="icon iconfont icon-fujian"></i><span style="font-size: 26px;color: #999;">请上传简历</span><input class="upload" type="file" style="display:none;" id="uploadbtn">
+                </label>
             </div>
         </div>
         <!-- <div class="weui-flex  uploadfileff" id="uploadfile">
@@ -765,8 +761,10 @@
         var fileExtension = path.substring(pIndex + 1);
         var zIndex = fileExtension.lastIndexOf('\.');
         var zExtension = fileExtension.substring(zIndex + 1);
+        //debugger;
+        $(".file .done").html('<div style=""><div class="weui-flex-item "'+zExtension+'><i>'+fileExtension+'</i><a href="" class="delete">删除</a></div></div>');
         // $("#uploadfile").after('<div class="weui-flex tcenter done" id="filename"><div class="weui-flex-item "'+zExtension+'>'+fileExtension+'</div></div>')
-        $("#uploadfile").html('<div class=""><div class="lasld fiflel-text" style="width: 250px;">附件</div></div><div class="weui-flex-item pdf done"><i>个人简历.pdf</i><a href="" class="delete">删除</a></div>')
+       /* $("#uploadfile").html('<div class=""><div class="lasld fiflel-text" style="width: 250px;">附件</div></div><div class="weui-flex-item pdf done"><i>个人简历.pdf</i><a href="" class="delete">删除</a></div>')*/
         event.preventDefault();
         /* Act on the event */
     });
